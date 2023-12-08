@@ -4,7 +4,13 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  revString = str.toLowerCase().replace(/[^A-Z0-9]+/ig, "").split("").reverse().join(""); 
+  if (revString == str.toLowerCase().replace(/[^A-Z0-9]+/ig, "")){
+    return true;
+  }else {
+    return false;
+  }
 }
 
 module.exports = isPalindrome;
+//console.log(isPalindrome("tarat"))
